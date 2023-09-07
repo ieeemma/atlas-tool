@@ -249,23 +249,21 @@ class AtlasFile:
 
             self.atlas_data_items.append(adi)
 
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        print("Usage: \n\tatlas.exe filename.xnb\n\tatlas.exe filename.json")
+        raise SystemExit
+    else:
+        file_path = sys.argv[1]
 
-
-
-if len(sys.argv) == 1:
-    print("Usage: \n\tatlas.exe filename.xnb\n\tatlas.exe filename.json")
-    raise SystemExit
-else:
-    file_path = sys.argv[1]
-
-atlas = AtlasFile()
-if file_path.endswith(".xnb"):
-    atlas.read(file_path)
-    atlas.write_json(file_path[:-4]+".json")
-        
-elif file_path.endswith(".json"):
-    atlas.read_json(file_path)
-    atlas.write(file_path[:-5]+".xnb")
-else:
-    print("Usage: \n\tatlas.exe filename.xnb\n\tatlas.exe filename.json")
-    raise SystemExit
+    atlas = AtlasFile()
+    if file_path.endswith(".xnb"):
+        atlas.read(file_path)
+        atlas.write_json(file_path[:-4]+".json")
+            
+    elif file_path.endswith(".json"):
+        atlas.read_json(file_path)
+        atlas.write(file_path[:-5]+".xnb")
+    else:
+        print("Usage: \n\tatlas.exe filename.xnb\n\tatlas.exe filename.json")
+        raise SystemExit
