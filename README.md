@@ -35,16 +35,12 @@ Download the above 2 files and place them in the same folder as the scripts
   - ```make-images.py [input folder]```
   - Example: ```make-images.py white```
 
----
-
 ## Additional information
 
 If you want to extract the sprites of another character other than cosmo you need to find that character's hard pixel limit set by the game exe, you cannot find this number anywhere, you have to find it out through trial and error, for example, cosmo's max height is 190, if you dont know this hard limit the sprites you end up making are going to be teared
 
 One way to find it (which I used) is to make a sprite sheet with black and red rectangles of different sizes until you find the correct value, of course
 this is done with the help of [pop's atlas generator](https://github.com/pop4959/Atlas-Generator/releases/tag/1.1.5)
-
----
 
 ## Huge thanks:
 
